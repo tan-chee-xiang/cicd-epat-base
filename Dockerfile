@@ -1,5 +1,5 @@
 # first stage
-FROM eclipse-temurin:23-jdk AS builder
+FROM eclipse-temurin:25.0.1_8-jdk-ubi10-minimal AS builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY pom.xml .
 RUN ./mvnw package -DskipTests=true
 
 # second stage
-FROM eclipse-temurin:23-jre
+FROM eclipse-temurin:25.0.1_8-jre-ubi10-minimal
 
 WORKDIR /runningapp
 
