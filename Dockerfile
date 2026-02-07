@@ -11,7 +11,7 @@ COPY pom.xml .
 RUN ./mvnw package -DskipTests=true
 
 # second stage
-FROM eclipse-temurin:25.0.1_8-jre-alpine-3.23
+FROM eclipse-temurin:25.0.2_10-jre-alpine-3.23
 
 WORKDIR /runningapp
 
